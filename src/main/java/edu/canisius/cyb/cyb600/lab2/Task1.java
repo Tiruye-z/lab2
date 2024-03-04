@@ -14,10 +14,10 @@ public class Task1 {
      */
     public List<Character> listAllCharacters(String stringToList){
         if (stringToList == null){
-            return null;
+            return new ArrayList<>();
         }
         List<Character> characterList = new ArrayList<>();
-        for(int i=1; i<stringToList.toCharArray().length;i++){
+        for(int i=0; i<stringToList.toCharArray().length;i++){
             characterList.add(stringToList.toCharArray()[i]);
         }
         return characterList;
@@ -29,12 +29,17 @@ public class Task1 {
      * @param concat String to surround base string
      * @return String with base surrounded by two Strings. Should not return null.
      */
-    public String concatenateToFrontAndEnd(String baseString, String concat){
-        return baseString+concat;
+    public String concatenateToFrontAndEnd(String baseString, String concat) {
+        if (concat == null) {
+            return ""; // Return an empty string
+        } else {
+            return concat + baseString + concat;
+        }
     }
 
+
     /**
-     * Easy. Dog (case insensitive) goes in, you're good.
+     * Easy. Dog (case_insensitive) goes in, you're good.
      * Anything else but dog? That's not a dog.
      * @param betterBeDog String that better be a dog. Null strings are not dogs.
      * @throws NotADogException When someone is silly and doesn't put in a dog.

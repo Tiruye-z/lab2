@@ -23,7 +23,7 @@ public class Task1UnitTests {
     public void setUp() {
         this.task1 = new Task1();
     }
-System.out.println("Hello world!");
+
     @Test
     /*
     STUDENTS SHOULD NOT BE CHANGING THIS METHOD.
