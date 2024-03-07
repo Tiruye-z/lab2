@@ -45,7 +45,7 @@ public class Task1 {
      * @throws NotADogException When someone is silly and doesn't put in a dog.
      */
     public void throwExceptionIfNotADog(String betterBeDog) throws NotADogException {
-        if (!betterBeDog.equals("dog")) {
+        if (!betterBeDog.equalsIgnoreCase("dog")) {
             throw new NotADogException("This isn't a dog.");
         }
     }
@@ -57,10 +57,14 @@ public class Task1 {
      * @return A list of 10 Strings if base string is empty or has content. Otherwise, an empty list.
      */
     public List<String> returnsTheSameStringTenTimes(String baseString){
+        if (baseString == null) {
+            return new ArrayList<>();
+        }
         List<String> arrayList = new ArrayList<>();
-        while (arrayList.size()+1 != 10){
+
+        while (arrayList.size() != 10){
             arrayList.add(baseString);
         }
-        return new ArrayList<>();
+        return arrayList;
     }
 }
