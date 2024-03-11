@@ -31,15 +31,7 @@ public class Task3UnitTests {
         assertNotNull(actual);
         Collections.sort(expected); // Sort the expected ArrayList
         Collections.sort(actual);
-        assertEquals("string should be zero", expected, actual);
-
-        // Student should write tests here
-       /* String test = "bookkeper";
-        ArrayList<String> check = task3.removeDuplicates(test);
-
-        assertNotNull(check);
-        assertEquals("Test should come as br", "bokper", check);
-*/
+        assertEquals( expected, actual);
     }
 
     @Test
@@ -49,7 +41,7 @@ public class Task3UnitTests {
         ArrayList<String> check=task3.removeDuplicates(test);
 
         assertNotNull(check);
-        assertEquals("string should be zero", new ArrayList<>(), check);
+        assertEquals("string should be empty", new ArrayList<>(), check);
 
 
     }
@@ -61,7 +53,7 @@ public class Task3UnitTests {
         ArrayList<String> check=task3.removeDuplicates(test);
 
         assertNotNull(check);
-        assertEquals("string should be zero", new ArrayList<>(), check);
+        assertEquals("string should be empty", new ArrayList<>(), check);
 
 
     }
@@ -74,7 +66,7 @@ public class Task3UnitTests {
         boolean check = task3.areTheseAnagrams(test,test2);
 
         assertNotNull(check);
-        assertTrue("answer should be true", check );
+        assertTrue("Character should be true", check );
 
     }
 
@@ -85,7 +77,7 @@ public class Task3UnitTests {
         String test2= null;
         boolean check = task3.areTheseAnagrams(test2,test1);
 
-        assertFalse("IT SHOULD BE FALSE", check);
+        assertFalse("Character should be false", check);
 
     }
 
@@ -96,7 +88,7 @@ public class Task3UnitTests {
         String test2= "I am True";
         boolean check = task3.areTheseAnagrams(test2,test1);
 
-        assertFalse("IT SHOULD BE FALSE", check);
+        assertFalse("Character should be false", check);
 
     }
 
